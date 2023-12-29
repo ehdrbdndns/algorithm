@@ -1,6 +1,6 @@
 class PQeue {
   constructor() {
-    this.queue = [Number.MIN_VALUE];
+    this.queue = [-1000000001];
   }
 
   set insert(value) {
@@ -77,14 +77,13 @@ class PQeue {
   }
 }
 
-// const readline = require('readline');
-// const rl = readline.createInterface({
-//   input: process.stdin,
-//   output: process.stdout,
-// });
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
 let n;
-let result = [];
 const PQueue = new PQeue();
 
 rl.question('', (answer) => {
@@ -93,17 +92,22 @@ rl.question('', (answer) => {
   rl.on('line', solution).on('close', closeListener);
 });
 
-// const [testN, ...list] = `5
-// 12 7 9 15 5
-// 13 8 11 19 6
-// 21 10 26 31 16
-// 48 14 28 35 25
-// 52 20 32 41 49`.split('\n');
-// let n = testN;
+// const [testN, ...list] = `1
+// 0`.split('\n');
+// const n = Number(testN);
+// const PQueue = new PQeue();
+
+// for (let i = 0; i < list.length; i++) {
+//   solution(list[i]);
+// }
 
 function solution(line) {
   if (line === '') {
     rl.close();
+  }
+  if (n === 1) {
+    PQueue.insert = Number(line);
+    return;
   }
 
   line.split(' ').forEach((num) => {
@@ -118,7 +122,3 @@ function closeListener() {
   console.log(PQueue.pop);
   process.exit();
 }
-
-// for (let i = 0; i < list.length; i++) {
-//   solution(list[i]);
-// }
