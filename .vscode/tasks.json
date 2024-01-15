@@ -7,16 +7,14 @@
       "args": [
         "-fdiagnostics-color=always",
         "-g",
-        "${file}",
+        "${fileDirname}/*.cpp",
         "-o",
-        "${fileDirname}\\${fileBasenameNoExtension}.exe"
+        "${fileDirname}/${fileBasenameNoExtension}"
       ],
       "options": {
         "cwd": "C:/msys64/ucrt64/bin"
       },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "build",
         "isDefault": true
