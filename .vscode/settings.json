@@ -1,5 +1,9 @@
 {
   "files.associations": {
-    "new": "cpp"
+    "new": "cpp",
+    "vector": "cpp",
+    "array": "cpp",
+    "string_view": "cpp",
+    "initializer_list": "cpp"
   }
 }
