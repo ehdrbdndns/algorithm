@@ -46,6 +46,15 @@
     "streambuf": "cpp",
     "typeinfo": "cpp",
     "chrono": "cpp",
-    "span": "cpp"
+    "span": "cpp",
+    "variant": "cpp",
+    "forward_list": "cpp",
+    "list": "cpp",
+    "unordered_set": "cpp",
+    "format": "cpp",
+    "ranges": "cpp",
+    "stacktrace": "cpp",
+    "regex": "cpp",
+    "valarray": "cpp"
   }
 }
