@@ -3,37 +3,19 @@
  * @param {number} k
  * @return {boolean}
  */
+const MAX_NUM = 100001;
 var containsNearbyDuplicate = function (nums, k) {
-  const mapOfNums = new Map();
+  let result = MAX_NUM;
+  const map = new Map();
 
   for (let i = 0; i < nums.length; i++) {
-    if (mapOfNums.has(nums[i])) {
-      mapOfNums.get(nums[i]).push(i);
-    } else {
-      mapOfNums.set(nums[i], [i]);
+    if (map.has(nums[i])) {
+      let gap = Math.abs(map.get(nums[i]) - i);
+      result = result > gap ? gap : result;
     }
+
+    map.set(nums[i], i);
   }
 
-  let result = false;
-  for (let [_, value] of mapOfNums.entries()) {
-
-    if (value.length < 2) {
-      continue;
-    }
-
-    for (let i = value.length - 1; i >= 0; i--) {
-      for (let j = value.length - 1; j >= 0; j--) {
-        if (i === j) {
-          continue;
-        }
-
-        if (Math.abs(value[i] - value[j]) <= k) {
-          result = true;
-          return result;
-        }
-      }
-    }
-  }
-
-  return result;
+  return k >= result;
 };
