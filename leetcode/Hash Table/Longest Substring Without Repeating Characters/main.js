@@ -10,15 +10,11 @@ var lengthOfLongestSubstring = function (s) {
   for (let i = 0; i < s.length; i++) {
     const c = s[i];
 
-    if (map.has(c)) {
+    if (map.has(c) && map.get(c) >= startIndex) {
       const length = i - startIndex;
       longestLength = longestLength < length ? length : longestLength;
 
       const duplicatedIndex = map.get(c);
-      // init exists map
-      for (let j = startIndex; j <= duplicatedIndex; j++) {
-        map.delete(s[j]);
-      }
 
       startIndex = duplicatedIndex + 1;
     }
