@@ -5,26 +5,45 @@
  */
 var topKFrequent = function (nums, k) {
   const map = new Map();
-  for (let i = 0; i < nums.length; i++) {
-    if (map.has(nums[i])) {
-      map.set(nums[i], map.get(nums[i]) + 1);
+
+  for (let num of nums) {
+    if (map.has(num)) {
+      map.set(num, map.get(num) + 1);
     } else {
-      map.set(nums[i], 1)
+      map.set(num, 1)
     }
   }
 
   const convertedMap = new Map();
   const rankList = [];
   for (let [key, value] of map) {
-    convertedMap.set(value, key);
-    rankList.push(value);
+    if (convertedMap.has(value)) {
+      convertedMap.get(value).push(key);
+    } else {
+      convertedMap.set(value, [key]);
+      rankList.push(value);
+    }
   }
 
   rankList.sort((a, b) => b - a);
 
-  const result = [];
-  for (let i = 0; i < k; i++) {
-    result.push(convertedMap.get(rankList[i]))
+  let _k = k;
+  let i = 0;
+  let result = [];
+  while (_k > 0) {
+    const rank = rankList[i];
+    const numList = convertedMap.get(rank);
+    if (numList.length <= _k) {
+      result.push(...numList);
+      _k -= numList.length;
+    } else {
+      for (let j = 0; j < _k; j++) {
+        result.push(numList[j]);
+      }
+      _k = 0;
+    }
+
+    i++;
   }
 
   return result;
