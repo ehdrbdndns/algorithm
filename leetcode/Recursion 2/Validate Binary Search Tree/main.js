@@ -11,54 +11,59 @@
  * @return {boolean}
  */
 var isValidBST = function (root) {
-  if (!root.left && !root.right) {
-    return true;
-  }
-
-  let left = true;
-  if (!!root.left) {
-    left = divide(root, root.left, 'left');
-  }
-
-  let right = true;
-  if (!!root.right) {
-    right = divide(root, root.right, 'right');
-  }
-
-  return left && right;
+  const result = divide_conquer(root);
+  return result.isValid;
 };
 
-function divide(parent, cur, pos) {
+const divide_conquer = (node) => {
   // base case
-  if (!cur) {
-    return true;
+  if (node === null) {
+    return { isValid: true, min: null, max: null };
   }
 
-  if (!cur.left && !cur.right) {
-    const isBST = (pos === 'left'
-      ? parent.val > cur.val
-      : parent.val < cur.val);
-    return { isBST, min: cur.val, max: cur.val }
+  // divide left and right
+  const left = node.left;
+  const right = node.right;
+
+  if (left !== null && left.val > node.val) {
+    return { isValid: false, min: null, max: null };
+  }
+  if (right !== null && right.val < node.val) {
+    return { isValid: false, min: null, max: null };
   }
 
+  const leftNode = divide_conquer(node.left);
+  const rightNode = divide_conquer(node.right);
 
-  // left
-  const left = divide(cur, cur.left, 'left');
+  // check valid
+  if (!leftNode.isValid || !rightNode.isValid) {
+    return { isValid: false, min: null, max: null };
+  }
 
-  // right
-  const right = divide(cur, cur.right, 'right');
+  if (leftNode.max !== null && leftNode.max >= node.val) {
+    return { isValid: false, min: null, max: null };
+  }
 
-  // conqure
-  let isBST = (pos === 'left'
-    ? parent.val > cur.val
-    : parent.val < cur.val
-  ) && left.isBST && left.max < cur.val
-    && right.isBST && right.min > cur.val
+  if (rightNode.min !== null && rightNode.min <= node.val) {
+    return { isValid: false, min: null, max: null };
+  }
+
+  const isValid = true;
+  let min = null;
+  let max = null;
+
+  if (leftNode.min === null) {
+    min = node.val;
+  } else {
+    min = Math.min(node.val, leftNode.min)
+  }
+
+  if (rightNode.max === null) {
+    max = node.val;
+  } else {
+    max = Math.max(node.val, rightNode.max)
+  }
 
   // combine
-  return {
-    isBST,
-    min: left.min > right.min ? right.min : left.min,
-    max: left.max > right.max ? left.max : right.max
-  };
+  return { isValid, min, max };
 }
