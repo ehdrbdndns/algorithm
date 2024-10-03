@@ -3,45 +3,33 @@
  * @return {number}
  */
 var largestRectangleArea = function (heights) {
-  const isValid = (pivotHeight, curHeight) => {
-    if (pivotHeight > curHeight) {
-      return false;
-    }
-
-    if (pivotHeight === 0 || curHeight === 0) {
-      return false;
-    }
-
-    return true;
-  }
-
-  const canHasLargestArea = (pivotHeight, curIndex, largestArea) => {
-    return (pivotHeight * (heights.length - curIndex)) >= largestArea;
-  }
-
-  const backtracking = (pivotHeight, depth, curIndex) => {
+  const backtracking = (pivotHeight, curIndex, depth, largestArea) => {
     // base case
-    if (curIndex >= heights.length) {
-      return pivotHeight * depth;
+    if (curIndex === heights.length) {
+      return pivotHeight * (depth - 1)
     }
 
-    // i is height
-    let largestArea = 0;
-    if (isValid(pivotHeight, heights[curIndex])) {
-      largestArea = backtracking(pivotHeight, depth + 1, curIndex + 1);
-    } else {
-      largestArea = pivotHeight * depth;
+    // base case
+    if (pivotHeight > heights[curIndex]) {
+      return pivotHeight * (depth - 1)
     }
 
-    for (let i = heights[curIndex]; i >= 0; i--) {
-      if (canHasLargestArea(i, curIndex, largestArea)) {
-        let area = backtracking(i, 1, curIndex + 1);
-        largestArea = area > largestArea ? area : largestArea;
+    let newLargestArea = largestArea;
+
+    const value = backtracking(pivotHeight, curIndex + 1, depth + 1, newLargestArea);
+    newLargestArea = value > newLargestArea ? value : newLargestArea;
+
+    for (let h = heights[curIndex]; h >= 0; h--) {
+      if (h * (heights.length - curIndex) >= newLargestArea) {
+        const value = backtracking(h, curIndex + 1, 2, newLargestArea);
+        newLargestArea = value > newLargestArea ? value : newLargestArea;
+      } else {
+        break;
       }
     }
 
-    return largestArea;
+    return newLargestArea;
   }
 
-  return backtracking(heights[0], 0, 0)
+  return backtracking(0, 0, 1, 0);
 };
