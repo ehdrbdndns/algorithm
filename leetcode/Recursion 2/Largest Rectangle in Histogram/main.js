@@ -3,33 +3,47 @@
  * @return {number}
  */
 var largestRectangleArea = function (heights) {
-  const backtracking = (pivotHeight, curIndex, depth, largestArea) => {
-    // base case
-    if (curIndex === heights.length) {
-      return pivotHeight * (depth - 1)
-    }
+  const [result, _1, _2] = divideAndConqure(heights);
 
-    // base case
-    if (pivotHeight > heights[curIndex]) {
-      return pivotHeight * (depth - 1)
-    }
+  return result;
+};
 
-    let newLargestArea = largestArea;
-
-    const value = backtracking(pivotHeight, curIndex + 1, depth + 1, newLargestArea);
-    newLargestArea = value > newLargestArea ? value : newLargestArea;
-
-    for (let h = heights[curIndex]; h >= 0; h--) {
-      if (h * (heights.length - curIndex) >= newLargestArea) {
-        const value = backtracking(h, curIndex + 1, 2, newLargestArea);
-        newLargestArea = value > newLargestArea ? value : newLargestArea;
-      } else {
-        break;
-      }
-    }
-
-    return newLargestArea;
+/**
+* @param {number[]} heights
+*/
+const divideAndConqure = (heights) => {
+  if (heights.length === 1) {
+    // [largestArea, commonHeight, commonCount]
+    return [heights[0], heights[0], 1];
   }
 
-  return backtracking(0, 0, 1, 0);
-};
+  // 왼쪽 오른쪽으로 나눔
+  const leftHeights = heights.slice(0, heights.length / 2);
+  const rightHeights = heights.slice(heights.length / 2, heights.length);
+
+  // 공통 높이와 가장 큰 area 값을 구함
+  const [leftLargestArea, leftCommonHeight, leftCommonCount] = leftHeights;
+  const [rightLargestArea, rightCommonHeight, rightCommonCount] = rightHeights;
+
+  // 융합
+  let commonHeight = 0;
+  let commonCount = 0;
+  let commonArea = 0;
+  let largestArea = leftLargestArea > rightLargestArea ? leftLargestArea : rightLargestArea;
+
+  if (leftCommonHeight < rightCommonHeight) {
+    commonHeight = leftCommonHeight;
+    commonCount = leftCommonCount + 1;
+  } else if (leftCommonHeight > rightCommonHeight) {
+    commonHeight = rightCommonHeight;
+    commonCount = rightCommonHeight + 1;
+  } else {
+    commonHeight = rightCommonHeight;
+    commonCount = rightCommonCount + leftCommonCount;
+  }
+
+  commonArea = commonHeight * commonCount;
+  largestArea = commonArea > largestArea ? commonArea : largestArea;
+
+  return [largestArea, commonHeight, commonCount];
+}
