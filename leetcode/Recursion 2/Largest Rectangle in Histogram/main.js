@@ -3,47 +3,31 @@
  * @return {number}
  */
 var largestRectangleArea = function (heights) {
-  const [result, _1, _2] = divideAndConqure(heights);
-
-  return result;
+  recursive(heights);
 };
 
-/**
-* @param {number[]} heights
-*/
-const divideAndConqure = (heights) => {
+const recursive = (heights) => {
+  // base case
   if (heights.length === 1) {
-    // [largestArea, commonHeight, commonCount]
-    return [heights[0], heights[0], 1];
+    console.log(heights[0])
+    return { area: [heights[0]], histogram: [heights[0]] }
   }
 
-  // 왼쪽 오른쪽으로 나눔
-  const leftHeights = heights.slice(0, heights.length / 2);
-  const rightHeights = heights.slice(heights.length / 2, heights.length);
+  const left = recursive(heights.slice(0, heights.length / 2));
+  const right = recursive(heights.slice(heights.length / 2, heights.length));
 
-  // 공통 높이와 가장 큰 area 값을 구함
-  const [leftLargestArea, leftCommonHeight, leftCommonCount] = leftHeights;
-  const [rightLargestArea, rightCommonHeight, rightCommonCount] = rightHeights;
+  const commonHeight = Math.min(left.histogram[left.histogram.length - 1], right.histogram[right.histogram.length - 1]);
 
-  // 융합
-  let commonHeight = 0;
-  let commonCount = 0;
-  let commonArea = 0;
-  let largestArea = leftLargestArea > rightLargestArea ? leftLargestArea : rightLargestArea;
+  // common Height에 대한 최적화 가능
 
-  if (leftCommonHeight < rightCommonHeight) {
-    commonHeight = leftCommonHeight;
-    commonCount = leftCommonCount + 1;
-  } else if (leftCommonHeight > rightCommonHeight) {
-    commonHeight = rightCommonHeight;
-    commonCount = rightCommonHeight + 1;
-  } else {
-    commonHeight = rightCommonHeight;
-    commonCount = rightCommonCount + leftCommonCount;
+  // commonHeight과 left와 right의 histogram에 있는 heights을 계산해 commonArea를 구함
+  const totalHistogramLegth = left.histogram.length + right.histogram.length - 2;
+  for (let i = 0; i <= totalHistogramLegth; i++) {
+    // pos
+    const isRightPos = i > (totalHistogramLegth / 2) ? true : false;
+    const histogram = isRightPos ? right.histogram : left.histogram;
+    const index = isRightPos ? i - (totalHistogramLegth / 2) - 1 : i;
+
+
   }
-
-  commonArea = commonHeight * commonCount;
-  largestArea = commonArea > largestArea ? commonArea : largestArea;
-
-  return [largestArea, commonHeight, commonCount];
 }
