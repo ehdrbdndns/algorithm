@@ -3,33 +3,15 @@
  * @return {number}
  */
 var minCostToMoveChips = function (position) {
-  const map = new Map();
-  let maxCount = 1;
-  let largestCostNum = position[0];
+  let even = 0;
+  let odd = 0;
   for (let i = 0; i < position.length; i++) {
-    const coin = position[i];
-
-    if (map.has(coin)) {
-      const newNumber = map.get(coin) + 1;
-      map.set(coin, newNumber);
-
-      if (maxCount < newNumber) {
-        maxCount = newNumber;
-        largestCostNum = coin;
-      }
+    if (position[i] % 2 === 0) {
+      even++;
     } else {
-      map.set(coin, 1);
+      odd++;
     }
   }
 
-  let result = 0;
-  for (let [key, value] of map) {
-    if (key === largestCostNum) {
-      continue;
-    }
-
-    result += (Math.abs(largestCostNum - key) % 2) * value;
-  }
-
-  return result;
+  return Math.min(even, odd);
 };
