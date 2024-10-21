@@ -21,8 +21,11 @@ var maxUniqueSplit = function(s) {
             if(!wordDict.has(words)) {
                 wordDict.add(words);
 
-                // recursive
-                getMaxNumOfUniqSubs(subs.slice(i + 1));
+                const newSubs = subs.slice(i + 1);
+
+                if((wordDict.size + newSubs.length) > result) {
+                    getMaxNumOfUniqSubs(subs.slice(i + 1));
+                }
 
                 wordDict.delete(words);
             }
