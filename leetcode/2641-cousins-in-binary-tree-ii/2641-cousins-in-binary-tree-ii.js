@@ -54,8 +54,6 @@ var replaceValueInTree = function (root) {
 
         nodeId++;
     }
-    
-    // console.log(cousinMap)
 
     // make new Tree;
     const newTree = root;
