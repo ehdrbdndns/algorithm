@@ -4,11 +4,7 @@ class Solution {
         for num in nums2 {
             var index = i + m;
             
-            if(index >= nums1.count) {
-                nums1.append(num)
-            } else {
                 nums1[index] = num
-            }
 
             i += 1
         }
