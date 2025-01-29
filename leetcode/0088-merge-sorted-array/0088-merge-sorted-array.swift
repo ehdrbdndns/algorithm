@@ -13,6 +13,6 @@ class Solution {
             i += 1
         }
 
-        nums1 = nums1.sorted { $0 < $1 }
+        nums1.sort()
     }
 }
