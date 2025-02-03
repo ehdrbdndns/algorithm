@@ -22,16 +22,17 @@ class Solution {
                 } else if isContinuous && isIncrease {
                     curSubArrayLength += 1;
                 } else {
-                    curSubArrayLength = 1
+                    curSubArrayLength = 2
                 }
             } else if prevNum > num {
+                print(prevNum, num, isContinuous, isIncrease, curSubArrayLength)
                 // decrease
                 if !isContinuous {
                     curSubArrayLength = 2
                 } else if isContinuous && !isIncrease {
                     curSubArrayLength += 1;
                 } else {
-                    curSubArrayLength = 1;
+                    curSubArrayLength = 2;
                 }
             } else {
                 // same
@@ -41,7 +42,7 @@ class Solution {
             isContinuous = prevNum != num;
             isIncrease = prevNum < num;
             longestLength = max(longestLength, curSubArrayLength);
-
+            
             prevNum = num;
         }
 
