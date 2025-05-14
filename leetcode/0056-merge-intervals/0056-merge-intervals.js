@@ -9,9 +9,8 @@ var merge = function(intervals) {
         return a[0] - b[0]
     })
 
-    let rear = 0;
     let tail = 1;
-    let overlapped = intervals[rear];
+    let overlapped = intervals[0];
     while(tail < intervals.length) {
         // rear의 end와 tail의 start 비교
         let end = overlapped[1];
@@ -20,6 +19,7 @@ var merge = function(intervals) {
         if(end >= start) {
             // overlapping
             let lagestEnd = overlapped[1] > intervals[tail][1] ? overlapped[1] : intervals[tail][1]
+            
             overlapped = [overlapped[0], lagestEnd]
         } else {
             // not overlapping
