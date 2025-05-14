@@ -19,7 +19,8 @@ var merge = function(intervals) {
 
         if(end >= start) {
             // overlapping
-            overlapped = [overlapped[0], intervals[tail][1]]
+            let lagestEnd = overlapped[1] > intervals[tail][1] ? overlapped[1] : intervals[tail][1]
+            overlapped = [overlapped[0], lagestEnd]
         } else {
             // not overlapping
             result.push(overlapped);
