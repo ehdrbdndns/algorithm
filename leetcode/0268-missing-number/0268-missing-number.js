@@ -5,12 +5,9 @@
 var missingNumber = function(nums) {
 
     nums.push(nums.length);
-    console.log(nums);
 
     let i = 0;
     while(i < nums.length) {
-        console.log(i);
-
         let a = nums[i];
         let b = nums[a];
 
@@ -27,7 +24,6 @@ var missingNumber = function(nums) {
         }
     }
 
-    console.log(nums);
     let result = nums.length - 1;
     for(let i = 0; i < nums.length; i++) {
         if(i !== nums[i]) {
