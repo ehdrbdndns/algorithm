@@ -1,6 +1,7 @@
 class Solution {
     func solve(_ board: inout [[Character]]) {
-        let N = board.count
+
+        let N = board.count        
         let M = board[0].count
 
         let DIR_LIST = [[1, 0], [-1, 0], [0, 1], [0, -1]]
@@ -22,9 +23,6 @@ class Solution {
             }
         }
 
-        // print("finished setting stack")
-        // print("stack: \(stack)");
-
         // DFS
         while(stack.count > 0) {
             guard let pos = stack.popLast() else { continue }
@@ -37,31 +35,25 @@ class Solution {
 
             visited[n][m] = true
 
-            // print("Max N, M: \(N - 1), \(M - 1)")
             for dir in DIR_LIST {
                 let newN = n + dir[0]
                 let newM = m + dir[1]
-
-                // print(newN, newM)
 
                 // check "out"
                 if(
                     N <= newN || newN < 0
                 ||  M <= newM || newM < 0
                 ) {
-                    // print("out")
                     continue
                 }
 
                 // check "visited"
                 if(visited[newN][newM]) { 
-                    // print("visited")
                     continue 
                 }
                 
                 // check "X"
                 if(board[newN][newM] == "X") {
-                    // print("X")
                     continue 
                 }
 
