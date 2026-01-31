@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0744-find-smallest-letter-greater-than-target](https://github.com/ehdrbdndns/algorithm/tree/master/0744-find-smallest-letter-greater-than-target) |
 | [2976-minimum-cost-to-convert-string-i](https://github.com/ehdrbdndns/algorithm/tree/master/2976-minimum-cost-to-convert-string-i) |
 | [3651-minimum-cost-path-with-teleportations](https://github.com/ehdrbdndns/algorithm/tree/master/3651-minimum-cost-path-with-teleportations) |
 ## Dynamic Programming
@@ -32,4 +33,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [2976-minimum-cost-to-convert-string-i](https://github.com/ehdrbdndns/algorithm/tree/master/2976-minimum-cost-to-convert-string-i) |
+## Binary Search
+|  |
+| ------- |
+| [0744-find-smallest-letter-greater-than-target](https://github.com/ehdrbdndns/algorithm/tree/master/0744-find-smallest-letter-greater-than-target) |
 <!---LeetCode Topics End-->
