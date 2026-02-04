@@ -24,10 +24,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3010-divide-an-array-into-subarrays-with-minimum-cost-i](https://github.com/ehdrbdndns/algorithm/tree/master/3010-divide-an-array-into-subarrays-with-minimum-cost-i) |
 | [3013-divide-an-array-into-subarrays-with-minimum-cost-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3013-divide-an-array-into-subarrays-with-minimum-cost-ii) |
 | [3637-trionic-array-i](https://github.com/ehdrbdndns/algorithm/tree/master/3637-trionic-array-i) |
+| [3640-trionic-array-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3640-trionic-array-ii) |
 | [3651-minimum-cost-path-with-teleportations](https://github.com/ehdrbdndns/algorithm/tree/master/3651-minimum-cost-path-with-teleportations) |
 ## Dynamic Programming
 |  |
 | ------- |
+| [3640-trionic-array-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3640-trionic-array-ii) |
 | [3651-minimum-cost-path-with-teleportations](https://github.com/ehdrbdndns/algorithm/tree/master/3651-minimum-cost-path-with-teleportations) |
 ## Matrix
 |  |
