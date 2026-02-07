@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [1653-minimum-deletions-to-make-string-balanced](https://github.com/ehdrbdndns/algorithm/tree/master/1653-minimum-deletions-to-make-string-balanced) |
 | [3640-trionic-array-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3640-trionic-array-ii) |
 | [3651-minimum-cost-path-with-teleportations](https://github.com/ehdrbdndns/algorithm/tree/master/3651-minimum-cost-path-with-teleportations) |
 ## Matrix
@@ -40,6 +41,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [1653-minimum-deletions-to-make-string-balanced](https://github.com/ehdrbdndns/algorithm/tree/master/1653-minimum-deletions-to-make-string-balanced) |
 | [2976-minimum-cost-to-convert-string-i](https://github.com/ehdrbdndns/algorithm/tree/master/2976-minimum-cost-to-convert-string-i) |
 ## Binary Search
 |  |
@@ -67,4 +69,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [3379-transformed-array](https://github.com/ehdrbdndns/algorithm/tree/master/3379-transformed-array) |
+## Stack
+|  |
+| ------- |
+| [1653-minimum-deletions-to-make-string-balanced](https://github.com/ehdrbdndns/algorithm/tree/master/1653-minimum-deletions-to-make-string-balanced) |
 <!---LeetCode Topics End-->
