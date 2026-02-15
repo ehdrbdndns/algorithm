@@ -42,6 +42,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0067-add-binary](https://github.com/ehdrbdndns/algorithm/tree/master/0067-add-binary) |
 | [1653-minimum-deletions-to-make-string-balanced](https://github.com/ehdrbdndns/algorithm/tree/master/1653-minimum-deletions-to-make-string-balanced) |
 | [2976-minimum-cost-to-convert-string-i](https://github.com/ehdrbdndns/algorithm/tree/master/2976-minimum-cost-to-convert-string-i) |
 | [3713-longest-balanced-substring-i](https://github.com/ehdrbdndns/algorithm/tree/master/3713-longest-balanced-substring-i) |
@@ -72,6 +73,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Simulation
 |  |
 | ------- |
+| [0067-add-binary](https://github.com/ehdrbdndns/algorithm/tree/master/0067-add-binary) |
 | [3379-transformed-array](https://github.com/ehdrbdndns/algorithm/tree/master/3379-transformed-array) |
 ## Stack
 |  |
@@ -108,4 +110,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [3713-longest-balanced-substring-i](https://github.com/ehdrbdndns/algorithm/tree/master/3713-longest-balanced-substring-i) |
+## Math
+|  |
+| ------- |
+| [0067-add-binary](https://github.com/ehdrbdndns/algorithm/tree/master/0067-add-binary) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0067-add-binary](https://github.com/ehdrbdndns/algorithm/tree/master/0067-add-binary) |
 <!---LeetCode Topics End-->
