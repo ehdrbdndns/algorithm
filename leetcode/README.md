@@ -28,6 +28,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3637-trionic-array-i](https://github.com/ehdrbdndns/algorithm/tree/master/3637-trionic-array-i) |
 | [3640-trionic-array-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3640-trionic-array-ii) |
 | [3651-minimum-cost-path-with-teleportations](https://github.com/ehdrbdndns/algorithm/tree/master/3651-minimum-cost-path-with-teleportations) |
+| [3719-longest-balanced-subarray-i](https://github.com/ehdrbdndns/algorithm/tree/master/3719-longest-balanced-subarray-i) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -68,6 +69,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [3013-divide-an-array-into-subarrays-with-minimum-cost-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3013-divide-an-array-into-subarrays-with-minimum-cost-ii) |
 | [3713-longest-balanced-substring-i](https://github.com/ehdrbdndns/algorithm/tree/master/3713-longest-balanced-substring-i) |
 | [3714-longest-balanced-substring-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3714-longest-balanced-substring-ii) |
+| [3719-longest-balanced-subarray-i](https://github.com/ehdrbdndns/algorithm/tree/master/3719-longest-balanced-subarray-i) |
 ## Sliding Window
 |  |
 | ------- |
@@ -102,6 +104,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0190-reverse-bits](https://github.com/ehdrbdndns/algorithm/tree/master/0190-reverse-bits) |
 | [1382-balance-a-binary-search-tree](https://github.com/ehdrbdndns/algorithm/tree/master/1382-balance-a-binary-search-tree) |
+| [3719-longest-balanced-subarray-i](https://github.com/ehdrbdndns/algorithm/tree/master/3719-longest-balanced-subarray-i) |
 ## Greedy
 |  |
 | ------- |
@@ -133,8 +136,13 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [3714-longest-balanced-substring-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3714-longest-balanced-substring-ii) |
+| [3719-longest-balanced-subarray-i](https://github.com/ehdrbdndns/algorithm/tree/master/3719-longest-balanced-subarray-i) |
 ## Two Pointers
 |  |
 | ------- |
 | [0696-count-binary-substrings](https://github.com/ehdrbdndns/algorithm/tree/master/0696-count-binary-substrings) |
+## Segment Tree
+|  |
+| ------- |
+| [3719-longest-balanced-subarray-i](https://github.com/ehdrbdndns/algorithm/tree/master/3719-longest-balanced-subarray-i) |
 <!---LeetCode Topics End-->
