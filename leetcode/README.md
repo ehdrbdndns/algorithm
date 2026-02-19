@@ -43,6 +43,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0067-add-binary](https://github.com/ehdrbdndns/algorithm/tree/master/0067-add-binary) |
+| [0696-count-binary-substrings](https://github.com/ehdrbdndns/algorithm/tree/master/0696-count-binary-substrings) |
 | [1653-minimum-deletions-to-make-string-balanced](https://github.com/ehdrbdndns/algorithm/tree/master/1653-minimum-deletions-to-make-string-balanced) |
 | [2976-minimum-cost-to-convert-string-i](https://github.com/ehdrbdndns/algorithm/tree/master/2976-minimum-cost-to-convert-string-i) |
 | [3713-longest-balanced-substring-i](https://github.com/ehdrbdndns/algorithm/tree/master/3713-longest-balanced-substring-i) |
@@ -132,4 +133,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [3714-longest-balanced-substring-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3714-longest-balanced-substring-ii) |
+## Two Pointers
+|  |
+| ------- |
+| [0696-count-binary-substrings](https://github.com/ehdrbdndns/algorithm/tree/master/0696-count-binary-substrings) |
 <!---LeetCode Topics End-->
