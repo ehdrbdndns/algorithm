@@ -47,6 +47,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0067-add-binary](https://github.com/ehdrbdndns/algorithm/tree/master/0067-add-binary) |
 | [0696-count-binary-substrings](https://github.com/ehdrbdndns/algorithm/tree/master/0696-count-binary-substrings) |
 | [0761-special-binary-string](https://github.com/ehdrbdndns/algorithm/tree/master/0761-special-binary-string) |
+| [1461-check-if-a-string-contains-all-binary-codes-of-size-k](https://github.com/ehdrbdndns/algorithm/tree/master/1461-check-if-a-string-contains-all-binary-codes-of-size-k) |
 | [1653-minimum-deletions-to-make-string-balanced](https://github.com/ehdrbdndns/algorithm/tree/master/1653-minimum-deletions-to-make-string-balanced) |
 | [2976-minimum-cost-to-convert-string-i](https://github.com/ehdrbdndns/algorithm/tree/master/2976-minimum-cost-to-convert-string-i) |
 | [3713-longest-balanced-substring-i](https://github.com/ehdrbdndns/algorithm/tree/master/3713-longest-balanced-substring-i) |
@@ -69,6 +70,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [1461-check-if-a-string-contains-all-binary-codes-of-size-k](https://github.com/ehdrbdndns/algorithm/tree/master/1461-check-if-a-string-contains-all-binary-codes-of-size-k) |
 | [3013-divide-an-array-into-subarrays-with-minimum-cost-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3013-divide-an-array-into-subarrays-with-minimum-cost-ii) |
 | [3713-longest-balanced-substring-i](https://github.com/ehdrbdndns/algorithm/tree/master/3713-longest-balanced-substring-i) |
 | [3714-longest-balanced-substring-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3714-longest-balanced-substring-ii) |
@@ -137,6 +139,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0693-binary-number-with-alternating-bits](https://github.com/ehdrbdndns/algorithm/tree/master/0693-binary-number-with-alternating-bits) |
 | [0762-prime-number-of-set-bits-in-binary-representation](https://github.com/ehdrbdndns/algorithm/tree/master/0762-prime-number-of-set-bits-in-binary-representation) |
 | [0868-binary-gap](https://github.com/ehdrbdndns/algorithm/tree/master/0868-binary-gap) |
+| [1461-check-if-a-string-contains-all-binary-codes-of-size-k](https://github.com/ehdrbdndns/algorithm/tree/master/1461-check-if-a-string-contains-all-binary-codes-of-size-k) |
 ## Backtracking
 |  |
 | ------- |
@@ -156,4 +159,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [3719-longest-balanced-subarray-i](https://github.com/ehdrbdndns/algorithm/tree/master/3719-longest-balanced-subarray-i) |
 | [3721-longest-balanced-subarray-ii](https://github.com/ehdrbdndns/algorithm/tree/master/3721-longest-balanced-subarray-ii) |
+## Rolling Hash
+|  |
+| ------- |
+| [1461-check-if-a-string-contains-all-binary-codes-of-size-k](https://github.com/ehdrbdndns/algorithm/tree/master/1461-check-if-a-string-contains-all-binary-codes-of-size-k) |
+## Hash Function
+|  |
+| ------- |
+| [1461-check-if-a-string-contains-all-binary-codes-of-size-k](https://github.com/ehdrbdndns/algorithm/tree/master/1461-check-if-a-string-contains-all-binary-codes-of-size-k) |
 <!---LeetCode Topics End-->
